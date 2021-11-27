@@ -1,9 +1,8 @@
-package org.sid.dao;
+package org.sid.repository;
 
-import org.sid.entities.AppUser;
+import org.sid.model.AppUser;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
-import org.springframework.stereotype.Repository;
 
 @RepositoryRestResource
 public interface AppUserRepository extends JpaRepository<AppUser,Long> {

@@ -1,9 +1,9 @@
 package org.sid.service;
 
-import org.sid.dao.AppRoleRepository;
-import org.sid.dao.AppUserRepository;
-import org.sid.entities.AppRole;
-import org.sid.entities.AppUser;
+import org.sid.repository.AppRoleRepository;
+import org.sid.repository.AppUserRepository;
+import org.sid.model.AppRole;
+import org.sid.model.AppUser;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
