@@ -1,9 +1,7 @@
-package org.sid.dao;
+package org.sid.repository;
 
-import org.sid.entities.AppRole;
-import org.sid.entities.AppUser;
+import org.sid.model.AppRole;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.stereotype.Repository;
 
 @Repository

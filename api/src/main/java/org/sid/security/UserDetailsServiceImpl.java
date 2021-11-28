@@ -1,7 +1,7 @@
 package org.sid.security;
 
-import org.sid.dao.AppUserRepository;
-import org.sid.entities.AppUser;
+import org.sid.repository.AppUserRepository;
+import org.sid.model.AppUser;
 import org.sid.service.AccountService;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

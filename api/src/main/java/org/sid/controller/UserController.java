@@ -1,7 +1,7 @@
-package org.sid.web;
+package org.sid.controller;
 
 import lombok.Data;
-import org.sid.entities.AppUser;
+import org.sid.model.AppUser;
 import org.sid.service.AccountService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

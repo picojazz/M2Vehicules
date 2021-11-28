@@ -1,4 +1,4 @@
-package org.sid.entities;
+package org.sid.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
