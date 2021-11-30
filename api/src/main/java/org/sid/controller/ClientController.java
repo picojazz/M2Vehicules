@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Controller
-@RequestMapping(value = "/m2vehicule/api/client/*")
+//@RequestMapping(value = "/m2vehicule/api/client/*")
 public class ClientController {
 
     @Autowired
