@@ -3,6 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 // Import Containers
 import { DefaultLayoutComponent } from './containers';
+import { HomeComponent } from './front/home/home.component';
+import { TestComponent } from './front/test/test.component';
 
 import { P404Component } from './views/error/404.component';
 import { P500Component } from './views/error/500.component';
@@ -50,6 +52,18 @@ export const routes: Routes = [
       title: 'Home'
     },
     children: [
+      {
+        path: 'homee',
+        component: HomeComponent,
+      },
+      {
+        path: 'test',
+        component: TestComponent,
+      },
+
+
+
+      //template
       {
         path: 'base',
         loadChildren: () => import('./views/base/base.module').then(m => m.BaseModule)
