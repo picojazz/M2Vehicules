@@ -8,4 +8,5 @@ public interface SecurityParams {
     public final static String TOKEN_PREFIX = "Bearer ";
     public final static Date JWT_EXPIREAT = new Date(System.currentTimeMillis()+10*24*60*60000);
 
+
 }

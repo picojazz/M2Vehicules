@@ -19,6 +19,7 @@ public class SecServiceApplication {
         SpringApplication.run(SecServiceApplication.class, args);
     }
 
+    /*
    @Bean
    CommandLineRunner start(AccountService accountService, AppUserRepository appUserRepository){
         return args -> {
@@ -32,6 +33,8 @@ public class SecServiceApplication {
             appUserRepository.findAll().forEach(System.out::println);
         };
     }
+     */
+
     @Bean
     BCryptPasswordEncoder getBCPE(){
         return new BCryptPasswordEncoder();
