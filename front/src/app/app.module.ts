@@ -44,6 +44,16 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts';
 import { HomeComponent } from './front/home/home.component';
 import { TestComponent } from './front/test/test.component';
+import { ConnexionComponent } from './front/connexion/connexion.component';
+
+import { InscriptionclientComponent } from './front/inscriptionclient/inscriptionclient.component';
+import { ModiprofileComponent } from './front/modiprofile/modiprofile.component';
+import { ReservationComponent } from './front/reservation/reservation.component';
+import {HttpClient, HttpClientModule} from '@angular/common/http'
+import { FormsModule } from '@angular/forms';
+
+
+
 
 @NgModule({
   imports: [
@@ -53,6 +63,8 @@ import { TestComponent } from './front/test/test.component';
     AppAsideModule,
     AppBreadcrumbModule.forRoot(),
     AppFooterModule,
+    FormsModule,
+    HttpClientModule,
     AppHeaderModule,
     AppSidebarModule,
     PerfectScrollbarModule,
@@ -70,7 +82,12 @@ import { TestComponent } from './front/test/test.component';
     LoginComponent,
     RegisterComponent,
     HomeComponent,
-    TestComponent
+    TestComponent,
+    ConnexionComponent,
+    InscriptionclientComponent,
+    ModiprofileComponent,
+    ReservationComponent,
+  
   ],
   providers: [
     {

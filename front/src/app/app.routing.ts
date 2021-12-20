@@ -3,7 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 
 // Import Containers
 import { DefaultLayoutComponent } from './containers';
+import { ConnexionComponent } from './front/connexion/connexion.component';
 import { HomeComponent } from './front/home/home.component';
+import { InscriptionclientComponent } from './front/inscriptionclient/inscriptionclient.component';
+import { ModiprofileComponent } from './front/modiprofile/modiprofile.component';
+import { ReservationComponent } from './front/reservation/reservation.component';
 import { TestComponent } from './front/test/test.component';
 
 import { P404Component } from './views/error/404.component';
@@ -38,11 +42,33 @@ export const routes: Routes = [
       title: 'Login Page'
     }
   },
+  
   {
     path: 'register',
     component: RegisterComponent,
     data: {
       title: 'Register Page'
+    }
+  },
+  {
+    path: 'connexion',
+    component: ConnexionComponent,
+    data: {
+      title: 'connexion Page'
+    }
+  },
+  {
+    path: 'inscriptionclient',
+    component: InscriptionclientComponent,
+    data: {
+      title: 'connexion Inscription'
+    }
+  },
+  {
+    path: 'modiprofile',
+    component: ModiprofileComponent,
+    data: {
+      title: 'page modification profile'
     }
   },
   {
@@ -56,10 +82,18 @@ export const routes: Routes = [
         path: 'homee',
         component: HomeComponent,
       },
+     
+
       {
         path: 'test',
         component: TestComponent,
       },
+      {
+        path: 'reservation',
+        component: ReservationComponent,
+      },
+
+
 
 
 

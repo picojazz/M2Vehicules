@@ -21,6 +21,12 @@ public class Client {
     private String client_cin ;
     private String client_login ;
     private String client_password ;
+
+    public Client() {
+
+    }
+
+
 /*
     @OneToMany( cascade = CascadeType.ALL,
                 fetch = FetchType.LAZY,

@@ -12,15 +12,15 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
-
+@CrossOrigin("*")
 @RestController
-@RequestMapping(value = "/m2vehicule/api/client/*")
+@RequestMapping(value="/m2vehicule/api/client/*")
 public class ClientController {
 
     @Autowired
     private ClientService clientService ;
 
-    @GetMapping(value = "/allclients")
+    @GetMapping(value="/allclients")
     public ResponseEntity<?> getAllClients(){
         List<Client> clients = clientService.getAllClients() ;
 
@@ -65,6 +65,7 @@ public class ClientController {
             clientToUpdate.setClient_password(client.getClient_password());
 
             Client clientUpdated = clientService.saveClient(clientToUpdate) ;
+
             return new ResponseEntity<ResponseMessage>(new ResponseMessage("client modifiée avec succès "), HttpStatus.OK) ;
         }
 

@@ -1,0 +1,59 @@
+
+<div class="app-body">
+    <main class="main d-flex align-items-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 mx-auto">
+            <div class="card mx-4">
+              <div class="card-body p-4">
+                <form  (ngSubmit)="inscriptClient()">
+                  <h1>Register</h1>
+                  <p class="text-muted">Create your account</p>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="icon-user"></i></span>
+                    </div>
+                    <input type="text" class="form-control" name="prenom" placeholder="Prenom" autocomplete="prenom" required [(ngModel)] ="client.client_prenom" #prenom="ngModel">
+                  </div>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="icon-user"></i></span>
+                    </div>
+                    <input type="text" class="form-control" name="nom" placeholder="Nom" autocomplete="nom" required [(ngModel)] ="client.client_nom" #nom="ngModel">
+                  </div>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fa fa-address-book fa-lg"></i></span>
+                    </div>
+                    <input type="text" class="form-control" name="adresse" placeholder="Adresse" autocomplete="adresse" required [(ngModel)] ="client.client_adresse"  #adresse="ngModel">
+                  </div>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fa fa-credit-card-alt fa-lg"></i></span>
+                    </div>
+                    <input type="text" class="form-control" name="cni" placeholder="CNI" autocomplete="cni" required [(ngModel)] ="client.client_cin" #cni="ngModel">
+                  </div>
+                 
+                    <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">@</span>
+                    </div>
+                    <input type="email" class="form-control" name="email" placeholder="Email" autocomplete="email" required [(ngModel)] ="client.client_login" #email="ngModel">
+                  </div>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="icon-lock"></i></span>
+                    </div>
+                    <input type="password" class="form-control" name= "password" placeholder="Password" autocomplete="new-password" required [(ngModel)] ="client.client_password" #password="ngModel"
+                    [class.is-invalid]="password.invalid && password.touched">
+                  </div>
+                  <button type="button" class="btn btn-block btn-success">Create Account</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  
