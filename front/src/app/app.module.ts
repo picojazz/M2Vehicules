@@ -44,10 +44,16 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts';
 import { HomeComponent } from './front/home/home.component';
 import { TestComponent } from './front/test/test.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { ErrorInterceptor, JwtInterceptor } from './_helpers';
 
 @NgModule({
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     AppAsideModule,
@@ -75,9 +81,12 @@ import { TestComponent } from './front/test/test.component';
   providers: [
     {
       provide: LocationStrategy,
-      useClass: HashLocationStrategy
+      useClass: HashLocationStrategy,
+
     },
     IconSetService,
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+        { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
   ],
   bootstrap: [ AppComponent ]
 })
