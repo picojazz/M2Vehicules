@@ -49,15 +49,19 @@ import { ConnexionComponent } from './front/connexion/connexion.component';
 import { InscriptionclientComponent } from './front/inscriptionclient/inscriptionclient.component';
 import { ModiprofileComponent } from './front/modiprofile/modiprofile.component';
 import { ReservationComponent } from './front/reservation/reservation.component';
-import {HttpClient, HttpClientModule} from '@angular/common/http'
-import { FormsModule } from '@angular/forms';
 
 
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { ErrorInterceptor, JwtInterceptor } from './_helpers';
 
 @NgModule({
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     AppAsideModule,
@@ -92,9 +96,12 @@ import { FormsModule } from '@angular/forms';
   providers: [
     {
       provide: LocationStrategy,
-      useClass: HashLocationStrategy
+      useClass: HashLocationStrategy,
+
     },
     IconSetService,
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+        { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
   ],
   bootstrap: [ AppComponent ]
 })
